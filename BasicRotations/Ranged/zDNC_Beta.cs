@@ -202,7 +202,7 @@ public sealed class zDNC_Beta : DancerRotation
         }
 
         // Further prioritized GCD abilities
-        if (((burst && !StarfallDancePvE.CanUse(out act, skipAoeCheck: true)) 
+        if (((burst && Esprit <= 90 && !StarfallDancePvE.CanUse(out act, skipAoeCheck: true)) 
             || (Esprit >= 85 && !TechnicalStepPvE.Cooldown.ElapsedAfter(115))) && SaberDancePvE.CanUse(out act, skipAoeCheck: true)) return true;
 
         if (StarfallDancePvE.CanUse(out act, skipAoeCheck: true)) return true;
